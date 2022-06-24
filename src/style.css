@@ -1,0 +1,57 @@
+:root {
+  --tawny-port-50: #fcf3fa;
+  --tawny-port-100: #fae9f6;
+  --tawny-port-200: #f6d4ed;
+  --tawny-port-300: #efb2de;
+  --tawny-port-400: #e581c7;
+  --tawny-port-500: #d95baf;
+  --tawny-port-600: #c63c91;
+  --tawny-port-700: #aa2c76;
+  --tawny-port-800: #8d2762;
+  --tawny-port-900: #712350;
+  --tawny-port-1000: #3c122a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#layout-container {
+  background-color: var(--tawny-port-700);
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "header header" "time to-do" "projects to-do";
+  grid-template-rows: 100px 300px 1fr;
+  grid-template-columns: 200px 1fr;
+}
+
+#setting-container {
+  display: flex;
+  align-items: center;
+  grid-area: header;
+  column-gap: 20px;
+}
+#time-container {
+  grid-area: time;
+}
+#project-container {
+  grid-area: projects;
+}
+#to-do-container {
+  grid-area: to-do;
+  box-shadow: inset 47px 47px 41px 6px var(--tawny-port-800);
+}
+
+#setting-container,
+#time-container,
+#project-container,
+#to-do-container {
+  color: var(--tawny-port-50);
+  font-size: 2.2rem;
+  padding: 20px;
+  border: 3px solid var(--tawny-port-100);
+
+  overflow: hidden;
+}
